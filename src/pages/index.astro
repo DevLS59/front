@@ -14,5 +14,7 @@ const firstPost = await getFirstPost();
     <h1>Astro & Sanity web</h1>
     {console.log(firstPost)}
     {JSON.stringify(firstPost)}
+
+    {firstPost.map((post) => <h1>{post.title}</h1>)}
   </body>
 </html>
