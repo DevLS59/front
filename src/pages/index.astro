@@ -1,7 +1,7 @@
 ---
-import { getFirstPost } from "../lib/sanityClient";
+import { getFirstPost } from "../lib/api";
 
-const firstPost = getFirstPost();
+const firstPost = await getFirstPost();
 ---
 
 <html lang="en">
@@ -13,5 +13,6 @@ const firstPost = getFirstPost();
   <body>
     <h1>Astro & Sanity web</h1>
     {console.log(firstPost)}
+    {JSON.stringify(firstPost)}
   </body>
 </html>
