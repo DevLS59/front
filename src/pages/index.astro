@@ -1,20 +1,12 @@
 ---
+import MainLayout from "../layouts/MainLayout.astro";
 import { getFirstPost } from "../lib/api";
 
 const firstPost = await getFirstPost();
 ---
 
-<html lang="en">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport" content="width=device-width" />
-  <meta name="generator" content={Astro.generator} />
-  <title>Astro</title>
+<MainLayout title="HomePAge">
+  <h1>Astro & Sanity web</h1>
 
-  <body>
-    <h1>Astro & Sanity web</h1>
-    {console.log(firstPost)}
-    {JSON.stringify(firstPost)}
-
-    {firstPost.map((post) => <h1>{post.title}</h1>)}
-  </body>
-</html>
+  {firstPost.map((post) => <h3>{post.title}</h3>)}
+</MainLayout>
