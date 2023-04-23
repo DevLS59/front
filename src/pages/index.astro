@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import SplitCard from "../components/SplitCard.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import { getFirstPost } from "../lib/api";
 
@@ -8,6 +9,7 @@ const firstPost = await getFirstPost();
 
 <MainLayout title="HomePAge">
   <Header />
+  <SplitCard />
 
   {firstPost.map((post) => <h3>{post.title}</h3>)}
 </MainLayout>
