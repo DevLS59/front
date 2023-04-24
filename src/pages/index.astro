@@ -1,4 +1,5 @@
 ---
+import Caroussel from "../components/Caroussel.astro";
 import Header from "../components/Header.astro";
 import SplitCard from "../components/SplitCard.astro";
 import MainLayout from "../layouts/MainLayout.astro";
@@ -10,6 +11,7 @@ const firstPost = await getFirstPost();
 <MainLayout title="HomePAge">
   <Header />
   <SplitCard />
+  <Caroussel />
 
   {firstPost.map((post) => <h3>{post.title}</h3>)}
 </MainLayout>

@@ -1,0 +1,79 @@
+---
+import Swiper from "swiper";
+---
+
+<div class="recettes">
+  <h1>Czroussel</h1>
+
+  <div class="swiper-wrapper carousel">
+    <div class="carousel-item swiper-slide">
+      <img src="../images/recette01.jpg" alt="" />
+    </div>
+    <div class="carousel-item swiper-slide">
+      <img src="../images/recette02.jpg" alt="miniature recette" />
+    </div>
+    <div class="carousel-item swiper-slide">
+      <img src="../images/recette03.jpg" alt="miniature recette" />
+    </div>
+    <div class="carousel-item swiper-slide">
+      <img src="../images/recette04.jpg" alt="miniature recette" />
+    </div>
+    <div class="carousel-item swiper-slide">
+      <img src="../images/recette05.jpg" alt="miniature recette" />
+    </div>
+    <div class="carousel-item swiper-slide">
+      <img src="../images/recette06.jpg" alt="miniature recette" />
+    </div>
+    <div class="carousel-item swiper-slide">
+      <img src="../images/recette03.jpg" alt="miniature recette" />
+    </div>
+    <div class="carousel-item swiper-slide">
+      <img src="../images/recette01.jpg" alt="miniature recette" />
+    </div>
+  </div>
+
+  <!-- <div class="cursor"></div>
+      <div class="cursor-drag">Drag <br> or click</div> -->
+</div>
+
+<style>
+  .recettes {
+    width: 100%;
+    height: 100vh;
+    padding: 5rem;
+  }
+  .recettes h1 {
+    color: #fff;
+    text-align: center;
+    font-family: RoslindaleBold;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 600px;
+    transform: rotate(3deg);
+    padding-top: 5rem;
+  }
+
+  .carousel {
+    position: absolute;
+    height: 400px;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    transform: rotate(4deg);
+  }
+  .carousel .carousel-item {
+    width: 450px;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+  .carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+</style>
