@@ -1,79 +1,103 @@
 ---
-import Swiper from "swiper";
 ---
 
-<div class="recettes">
-  <h1>Czroussel</h1>
-
-  <div class="swiper-wrapper carousel">
-    <div class="carousel-item swiper-slide">
-      <img src="../images/recette01.jpg" alt="" />
-    </div>
-    <div class="carousel-item swiper-slide">
-      <img src="../images/recette02.jpg" alt="miniature recette" />
-    </div>
-    <div class="carousel-item swiper-slide">
-      <img src="../images/recette03.jpg" alt="miniature recette" />
-    </div>
-    <div class="carousel-item swiper-slide">
-      <img src="../images/recette04.jpg" alt="miniature recette" />
-    </div>
-    <div class="carousel-item swiper-slide">
-      <img src="../images/recette05.jpg" alt="miniature recette" />
-    </div>
-    <div class="carousel-item swiper-slide">
-      <img src="../images/recette06.jpg" alt="miniature recette" />
-    </div>
-    <div class="carousel-item swiper-slide">
-      <img src="../images/recette03.jpg" alt="miniature recette" />
-    </div>
-    <div class="carousel-item swiper-slide">
-      <img src="../images/recette01.jpg" alt="miniature recette" />
+<div class="wrapper-caroussel">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide item">
+        <img src="./recette01.jpg" alt="" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./recette02.jpg" alt="" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./recette03.jpg" alt="" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./recette04.jpg" alt="" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./recette05.jpg" alt="" />
+      </div>
     </div>
   </div>
 
-  <!-- <div class="cursor"></div>
-      <div class="cursor-drag">Drag <br> or click</div> -->
+  <div class="swiper-pagination"></div>
 </div>
 
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+></script>
+<script is:inline>
+  new Swiper(".swiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    },
+  });
+</script>
 <style>
-  .recettes {
+  .wrapper-caroussel {
     width: 100%;
     height: 100vh;
-    padding: 5rem;
-  }
-  .recettes h1 {
-    color: #fff;
-    text-align: center;
-    font-family: RoslindaleBold;
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem;
+    background: #222;
+    position: relative;
   }
 
   .swiper {
     width: 100%;
-    height: 600px;
+    height: 400px;
     transform: rotate(3deg);
     padding-top: 5rem;
   }
 
-  .carousel {
-    position: absolute;
-    height: 400px;
-    display: flex;
-    gap: 3rem;
-    justify-content: center;
-    transform: rotate(4deg);
+  .swiper-wrapper {
   }
-  .carousel .carousel-item {
-    width: 450px;
+
+  .swiper-slide {
+    width: 500px;
     border-radius: 50px;
     overflow: hidden;
   }
-  .carousel .carousel-item img {
+
+  .swiper-slide img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
   }
+
+  .swiper-pagination {
+    
+    padding 2rem;
+  }
+
+     .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet{
+      background : yellow !important;
+     }
 </style>

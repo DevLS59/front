@@ -9,6 +9,7 @@ html {
 
 body {
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -18,4 +19,13 @@ a {
 .container {
   width: 90vw;
   margin: 0 auto;
+}
+
+.swiper-pagination {
+  bottom: 50px !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: yellow !important;
+  width: 10px !important;
+  height: 10px !important;
 }

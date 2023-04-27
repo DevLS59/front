@@ -2,58 +2,61 @@
 ---
 
 <div class="navbar">
-  <a href="/">
-    <div class="btn">
-      <div class="btn-circle">
-        <svg
-          class="o-button__circle"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px"
-          y="0px"
-          width="68px"
-          height="68px"
-          viewBox="0 0 68 68"
-          style="enable-background:new 0 0 68 68;"
-          xml:space="preserve"
-        >
-          <path
-            class="st0"
-            d="M60.4,52.1c-5.8,8.6-15.6,14.3-26.8,14.3C15.7,66.3,1.2,51.9,1.2,34S15.7,1.7,33.6,1.7
+  <div class="links">
+    <a href="/">
+      <div class="btn">
+        <div class="btn-circle">
+          <svg
+            class="o-button__circle"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            width="68px"
+            height="68px"
+            viewBox="0 0 68 68"
+            style="enable-background:new 0 0 68 68;"
+            xml:space="preserve"
+          >
+            <path
+              class="st0"
+              d="M60.4,52.1c-5.8,8.6-15.6,14.3-26.8,14.3C15.7,66.3,1.2,51.9,1.2,34S15.7,1.7,33.6,1.7
                 c10.4,0,19.6,4.9,25.6,12.5"
-          ></path>
-        </svg>
+            ></path>
+          </svg>
+        </div>
+        <div class="btn-label">Home</div>
       </div>
-      <div class="btn-label">Home</div>
-    </div>
-  </a>
-  <a href="/about">
-    <div class="btn">
-      <div class="btn-circle">
-        <svg
-          class="o-button__circle"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px"
-          y="0px"
-          width="68px"
-          height="68px"
-          viewBox="0 0 68 68"
-          style="enable-background:new 0 0 68 68;"
-          xml:space="preserve"
-        >
-          <path
-            class="st0"
-            d="M60.4,52.1c-5.8,8.6-15.6,14.3-26.8,14.3C15.7,66.3,1.2,51.9,1.2,34S15.7,1.7,33.6,1.7
+    </a>
+    <a href="/about">
+      <div class="btn">
+        <div class="btn-circle">
+          <svg
+            class="o-button__circle"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            width="68px"
+            height="68px"
+            viewBox="0 0 68 68"
+            style="enable-background:new 0 0 68 68;"
+            xml:space="preserve"
+          >
+            <path
+              class="st0"
+              d="M60.4,52.1c-5.8,8.6-15.6,14.3-26.8,14.3C15.7,66.3,1.2,51.9,1.2,34S15.7,1.7,33.6,1.7
                 c10.4,0,19.6,4.9,25.6,12.5"
-          ></path>
-        </svg>
+            ></path>
+          </svg>
+        </div>
+        <div class="btn-label">About</div>
       </div>
-      <div class="btn-label">About</div>
-    </div>
-  </a>
+    </a>
+  </div>
+  <img class="logo" src="./logo.png" alt="" />
 </div>
 
 <style>
@@ -68,6 +71,16 @@
     display: flex;
     align-items: center;
     padding: 0 8rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 70px;
+  }
+
+  .links {
+    display: flex;
   }
   .btn {
     position: relative;
